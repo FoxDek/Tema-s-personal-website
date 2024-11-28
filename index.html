@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema Sorokin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <div class="btn-up btn-up_hide"></div>
+  <header class="header">
+    <div class="container container--wider">
+      <div class="header__content">
+        <div class="logo">
+          <img class="logo__img" src="images/logo.png" alt="logo">
+        </div>
+        <a href="#ctaBlock" class="button">
+          <span class="button__text">Связаться</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero" >
+      <div class="container container--wider">
+        <div class="hero__content">
+          <div class="hero__textblock">
+            <span class="hero__greetings">Привет! Я</span>
+            <span class="hero__name">Артём Сорокин</span>
+            <div class="hero__title">
+              <span class="hero__profession">Web</span>
+              <span class="hero__profession hero__profession--left">Developer</span>
+            </div>
+            <p class="hero__description">Создаю сайты, которые вдохновляют.<br> Готов погрузиться в ваш проект и представить его в динамичном, современном стиле.</p>
+          </div>
+          <div class="hero__imgblock">
+            <img class="hero__avatar" src="images/My photo.png" alt="Tema Sorokin avatar">
+            <div class="socmedia">
+              <a class="socmedia__link" href="https://t.me/foxdek" target="_blank">
+                <svg class="socmedia__img" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 50C38.8104 50 50 38.8104 50 25C50 11.1896 38.8104 0 25 0C11.1896 0 0 11.1896 0 25C0 38.8104 11.1896 50 25 50ZM11.4396 24.4583L35.5438 15.1646C36.6625 14.7604 37.6396 15.4375 37.2771 17.1292L37.2792 17.1271L33.175 36.4625C32.8708 37.8333 32.0562 38.1667 30.9167 37.5208L24.6667 32.9146L21.6521 35.8187C21.3187 36.1521 21.0375 36.4333 20.3917 36.4333L20.8354 30.0729L32.4187 19.6083C32.9229 19.1646 32.3062 18.9146 31.6417 19.3563L17.3271 28.3687L11.1562 26.4437C9.81667 26.0187 9.7875 25.1042 11.4396 24.4583Z" fill="black"/></svg>
+              </a>
+              <a class="socmedia__link" href="https://vk.com/foxde_bf" target="_blank">
+                <svg class="socmedia__img" width="50" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.5835 0C11.7764 0 0.583496 11.1929 0.583496 25C0.583496 38.8071 11.7764 50 25.5835 50C39.3906 50 50.5835 38.8071 50.5835 25C50.5835 11.1929 39.3906 0 25.5835 0ZM38.9002 33.4863H35.7278C35.3842 33.4867 35.045 33.4097 34.7353 33.2609C34.4256 33.1121 34.1534 32.8954 33.939 32.627C32.9876 31.4325 31.1134 29.3146 29.1455 28.405C29.0315 28.3516 28.9059 28.3279 28.7803 28.3359C28.6548 28.3439 28.5332 28.3835 28.427 28.4509C28.3207 28.5184 28.2332 28.6115 28.1724 28.7217C28.1117 28.8319 28.0797 28.9557 28.0795 29.0815V32.219C28.0795 32.3855 28.0468 32.5502 27.9831 32.704C27.9195 32.8577 27.8262 32.9974 27.7085 33.1151C27.5908 33.2328 27.4512 33.3262 27.2974 33.3899C27.1437 33.4535 26.9789 33.4863 26.8125 33.4863H25.3456C23.438 33.4863 19.33 32.3251 16.0566 27.5567C13.2676 23.4942 12.0243 20.3458 11.2993 17.7931C11.2572 17.6435 11.2503 17.4861 11.2792 17.3334C11.308 17.1806 11.3719 17.0367 11.4658 16.9128C11.5597 16.7889 11.681 16.6885 11.8202 16.6194C11.9595 16.5502 12.1128 16.5143 12.2683 16.5145H15.4774C15.7976 16.5142 16.1093 16.6173 16.3662 16.8084C16.6231 16.9995 16.8114 17.2684 16.9032 17.5751C17.5 19.5711 19.0457 23.8769 21.7779 26.021C21.8612 26.0867 21.9613 26.1276 22.0668 26.139C22.1723 26.1505 22.2788 26.132 22.3743 26.0858C22.4697 26.0395 22.5503 25.9673 22.6066 25.8775C22.663 25.7876 22.693 25.6837 22.6931 25.5776V20.5517C22.6931 19.5584 22.2626 18.5646 21.5907 17.788C21.4939 17.6766 21.4312 17.5397 21.41 17.3937C21.3888 17.2476 21.4101 17.0985 21.4713 16.9642C21.5325 16.8299 21.6311 16.7161 21.7552 16.6363C21.8793 16.5564 22.0238 16.514 22.1714 16.514H27.1192C27.374 16.514 27.6184 16.6152 27.7986 16.7953C27.9787 16.9755 28.08 17.2198 28.08 17.4746V24.2446C28.08 24.3426 28.107 24.4387 28.158 24.5224C28.209 24.6061 28.282 24.6742 28.3691 24.7191C28.4562 24.764 28.554 24.7841 28.6517 24.7772C28.7495 24.7703 28.8435 24.7366 28.9233 24.6798C29.8315 24.0333 30.6094 23.0782 31.3248 22.0047C32.2252 20.6543 33.3239 18.4221 33.8751 17.2636C33.9818 17.0391 34.1499 16.8496 34.36 16.7168C34.5701 16.5841 34.8135 16.5137 35.062 16.5137H38.562C38.7082 16.5136 38.8519 16.5509 38.9796 16.6219C39.1073 16.693 39.2148 16.7955 39.2918 16.9197C39.3688 17.0439 39.4128 17.1857 39.4196 17.3317C39.4265 17.4777 39.3959 17.623 39.3309 17.7539C38.4477 19.5254 36.7274 22.7752 35.1087 24.6818C34.877 24.956 34.7635 25.311 34.7932 25.6687C34.823 26.0265 34.9934 26.3578 35.2672 26.59C36.3224 27.4916 37.9696 29.1584 39.7456 31.9347C39.8436 32.0866 39.8988 32.2622 39.9055 32.4429C39.9121 32.6235 39.87 32.8027 39.7835 32.9615C39.697 33.1202 39.5693 33.2528 39.4139 33.3451C39.2584 33.4375 39.081 33.4863 38.9002 33.4863Z" fill="black"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bio" >
+      <div class="container container--bio">
+        <div class="padding-between-blocks bio__content">
+
+          <div class="bio-left">
+            <div class="aboutme">
+              <h2 class="blocks-title aboutme__title">Обо мне</h2>
+              <p class="blocks-regular aboutme__description">Меня зовут Артём, мне 22 года.<br><br>
+                Я инициативный молодой человек с образованием журналиста и программиста. Два разных, на первый взгляд, направления мне удалось совместить в своей жизни.<br><br>
+                В веб-разработке у меня довольно мало опыта, но я готов к новым вызовам и стремлюсь развиваться в этой сфере.<br><br>
+                Рад знакомству!</p>
+            </div>
+            <div class="education">
+
+              <div class="education-item">
+                <a href="https://drive.google.com/file/d/1c8E0b_vMFE4-LogEgNOOKxXGQV6VK_mN/view?usp=drive_link" class="education-link" target="_blank">
+                  <span class="blocks-regular education-link__text">Журналистика</span>
+                  <svg class="education-link__img" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.14767 12.8803C1.75915 12.8803 1.42655 12.7403 1.14987 12.4603C0.8732 12.1803 0.734863 11.8437 0.734863 11.4506V1.44232C0.734863 1.04914 0.8732 0.712554 1.14987 0.432561C1.42655 0.152569 1.75915 0.0125732 2.14767 0.0125732H7.09248V1.44232H2.14767V11.4506H12.0373V6.44643H13.4501V11.4506C13.4501 11.8437 13.3118 12.1803 13.0351 12.4603C12.7584 12.7403 12.4258 12.8803 12.0373 12.8803H2.14767ZM5.46776 9.09147L4.47879 8.09064L11.0483 1.44232H8.50528V0.0125732H13.4501V5.01669H12.0373V2.44314L5.46776 9.09147Z" fill="#5B8CF5"/></svg>
+                </a>
+                <span class="blocks-regular education-item__data">2020 – 2024</span>
+                <p class="blocks-regular education-item__description">ФГБОУ ВО ЧГУ им. И.Н. Ульянова;<br>Диплом бакалавра с отличием</p>
+              </div>
+
+              <div class="education-item">
+                <a href="https://drive.google.com/file/d/1b_aHHzKzfGgAz-qr4F-pZoGoOds2GWMP/view?usp=drive_link" class="education-link" target="_blank">
+                  <span class="blocks-regular education-link__text">Web-разработка</span>
+                  <svg class="education-link__img" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.14767 12.8803C1.75915 12.8803 1.42655 12.7403 1.14987 12.4603C0.8732 12.1803 0.734863 11.8437 0.734863 11.4506V1.44232C0.734863 1.04914 0.8732 0.712554 1.14987 0.432561C1.42655 0.152569 1.75915 0.0125732 2.14767 0.0125732H7.09248V1.44232H2.14767V11.4506H12.0373V6.44643H13.4501V11.4506C13.4501 11.8437 13.3118 12.1803 13.0351 12.4603C12.7584 12.7403 12.4258 12.8803 12.0373 12.8803H2.14767ZM5.46776 9.09147L4.47879 8.09064L11.0483 1.44232H8.50528V0.0125732H13.4501V5.01669H12.0373V2.44314L5.46776 9.09147Z" fill="#5B8CF5"/></svg>
+                </a>
+                <span class="blocks-regular education-item__data">2023 – 2024</span>
+                <p class="blocks-regular education-item__description">ФГБОУ ВО МГУ им. Н.П. Огарёва;<br>Диплом бакалавра с отличием</p>
+              </div>
+
+              <div class="education-item">
+                <a href="https://drive.google.com/file/d/1F4HwCjt88OIQ_sgFR-7j4fWSAaVbPMpd/view?usp=drive_link" class="education-link" target="_blank">
+                  <span class="blocks-regular education-link__text">Основы тех. предприн.</span>
+                  <svg class="education-link__img" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.14767 12.8803C1.75915 12.8803 1.42655 12.7403 1.14987 12.4603C0.8732 12.1803 0.734863 11.8437 0.734863 11.4506V1.44232C0.734863 1.04914 0.8732 0.712554 1.14987 0.432561C1.42655 0.152569 1.75915 0.0125732 2.14767 0.0125732H7.09248V1.44232H2.14767V11.4506H12.0373V6.44643H13.4501V11.4506C13.4501 11.8437 13.3118 12.1803 13.0351 12.4603C12.7584 12.7403 12.4258 12.8803 12.0373 12.8803H2.14767ZM5.46776 9.09147L4.47879 8.09064L11.0483 1.44232H8.50528V0.0125732H13.4501V5.01669H12.0373V2.44314L5.46776 9.09147Z" fill="#5B8CF5"/></svg>
+                </a>
+                <span class="blocks-regular education-item__data">2023 – 2023</span>
+                <p class="blocks-regular education-item__description">ФГБОУ ВО ЧГУ им. И.Н. Ульянова;<br>Удостоверение о повыш. квалиф.</p>
+              </div>
+
+              <div class="education-item">
+                <a href="https://drive.google.com/file/d/1SzcRSgIq1XhnDCFtMzxwgsTw0kXM_Bu4/view?usp=drive_link" class="education-link" target="_blank">
+                  <span class="blocks-regular education-link__text">Основы Python</span>
+                  <svg class="education-link__img" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.14767 12.8803C1.75915 12.8803 1.42655 12.7403 1.14987 12.4603C0.8732 12.1803 0.734863 11.8437 0.734863 11.4506V1.44232C0.734863 1.04914 0.8732 0.712554 1.14987 0.432561C1.42655 0.152569 1.75915 0.0125732 2.14767 0.0125732H7.09248V1.44232H2.14767V11.4506H12.0373V6.44643H13.4501V11.4506C13.4501 11.8437 13.3118 12.1803 13.0351 12.4603C12.7584 12.7403 12.4258 12.8803 12.0373 12.8803H2.14767ZM5.46776 9.09147L4.47879 8.09064L11.0483 1.44232H8.50528V0.0125732H13.4501V5.01669H12.0373V2.44314L5.46776 9.09147Z" fill="#5B8CF5"/></svg>
+                </a>
+                <span class="blocks-regular education-item__data">2023 – 2024</span>
+                <p class="blocks-regular education-item__description">Образоват. платформа Stepik;<br>Сертификат c отличием</p>
+              </div>
+
+            </div>
+          </div>
+
+          <span class="separator separator--bios"></span>
+
+          <div class="bio-right">
+            <div class="skills">
+              <h2 class="blocks-title skills__title">Навыки</h2>
+              <div class="skills__items">
+
+                <div class="skills-item">
+                  <img src="images/html-circle.png " alt="HTML image" class="skills-item__img">
+                  <div class="skills-item__text">
+                    <span class="blocks-regular skills-item__title">Вёрстка и структура</span>
+                    <p class="blocks-regular skills-item__description">Умею верстать адаптивные сайты, отдавая предпочтение Mobile First. Активно использую Emmet, придерживаясь БЭМ-методологии.</p>
+                  </div>
+                </div>
+
+                <div class="skills-item">
+                  <img src="images/css-circle.png" alt="CSS image" class="skills-item__img">
+                  <div class="skills-item__text">
+                    <span class="blocks-regular skills-item__title">Стилизация и дизайн</span>
+                    <p class="blocks-regular skills-item__description">Верстаю с помощью SCAA (SCSS), придерживаюсь DRY и Solid принципа.</p>
+                  </div>
+                </div>
+
+                <div class="skills-item">
+                  <img src="images/js-circle.png" alt="JS image" class="skills-item__img">
+                  <div class="skills-item__text">
+                    <span class="blocks-regular skills-item__title">Интерактивность и функциональность</span>
+                    <p class="blocks-regular skills-item__description">Изучил базу языка, браузерные события. Использую библиотеки: Swiper.js.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <span class="separator separator--bioright"></span>
+
+            <div class="competencies">
+              <h2 class="blocks-title competencies__title">Компетенции</h2>
+              <div class="competencies__content">
+
+                <div class="competencies__items">
+                  <div class="competencies-item">
+                    <span class="blocks-regular competencies-item__title">В работе использую:</span>
+                    <ul class="competencies-list">
+                      <li class="blocks-regular competencies-list__item">Visual Studio Code</li>
+                      <li class="blocks-regular competencies-list__item">Git</li>
+                      <li class="blocks-regular competencies-list__item">Figma</li>
+                      <li class="blocks-regular competencies-list__item">Adobe Illustrator</li>
+                      <li class="blocks-regular competencies-list__item">Adobe Photoshop</li>
+                      <li class="blocks-regular competencies-list__item">Adobe InDesign</li>
+                      <li class="blocks-regular competencies-list__item">Wondershare Filmora</li>
+                      <li class="blocks-regular competencies-list__item">Adobe Audition</li>
+                      <li class="blocks-regular competencies-list__item">Sound Forge</li>
+                    </ul>
+                  </div>
+                  <span class="separator separator--competencies"></span>
+                  <div class="competencies-item">
+                    <span class="blocks-regular competencies-item__title">Личные качества:</span>
+                    <ul class="competencies-list">
+                      <li class="blocks-regular competencies-list__item">Обучаемость</li>
+                      <li class="blocks-regular competencies-list__item">Инициативность</li>
+                      <li class="blocks-regular competencies-list__item">Ответственность</li>
+                      <li class="blocks-regular competencies-list__item">Организованность</li>
+                      <li class="blocks-regular competencies-list__item">Целеустремлённость</li>
+                      <li class="blocks-regular competencies-list__item">Лидерские навыки</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="competencies__qrblock">
+                  <a href="https://drive.google.com/drive/folders/1a2BefM-glHH7b9y9MKexOEhjC9zO9I1c?usp=drive_link" class="qrcode-item" target="_blank">
+                    <img src="images/qr-portfolio.png" alt="Qr to Temas portfolio" class="qrcode-item__img">
+                    <span class="blocks-regular qrcode-item__title">Портфолио</span>
+                  </a>
+                  <a href="https://drive.google.com/drive/folders/1Rhj_2H8BansnXjBdHdym1w1cab7tXS0-?usp=drive_link" class="qrcode-item" target="_blank">
+                    <img src="images/qr-diplomas.png" alt="Qr to Temas diplomas" class="qrcode-item__img">
+                    <span class="blocks-regular qrcode-item__title">Дипломы</span>
+                  </a>
+                  <a href="https://drive.google.com/drive/folders/1Z56A0xMrmwY17rWzl6ZRpS_xnRYBs7vR?usp=drive_link" class="qrcode-item" target="_blank">
+                    <img src="images/qr-sertificates.png" alt="Qr to Temas sertificates" class="qrcode-item__img">
+                    <span class="blocks-regular qrcode-item__title">Сертификаты</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" >
+      <!-- <div class="container"> -->
+        <div class="padding-between-blocks projects__content">
+          <h2 class="blocks-title projects__title">Проекты</h2>
+          <p class="blocks-regular projects__description">Пока что в моём портфолио есть только учебные макеты сайтов, на которых я отрабатывал практические навыки.</p>
+          <div class="projects-swiper-container">
+            <div class="swiper projectsSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide projectsSwiper-slide">
+                  <img src="images/project-1-preview.png" class="swiper-slide__img"/>
+                  <div class="swiper-slide__buttons">
+                    <a href="#" class="button">
+                      <span class="button__text">Демо</span>
+                    </a>
+                    <a href="#" class="button">
+                      <span class="button__text">Код</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/project-1-preview.png" class="swiper-slide__img"/>
+                  <div class="swiper-slide__buttons">
+                    <a href="#" class="button">
+                      <span class="button__text">Демо</span>
+                    </a>
+                    <a href="#" class="button">
+                      <span class="button__text">Код</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/project-1-preview.png" class="swiper-slide__img"/>
+                  <div class="swiper-slide__buttons">
+                    <a href="#" class="button">
+                      <span class="button__text">Демо</span>
+                    </a>
+                    <a href="#" class="button">
+                      <span class="button__text">Код</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <section class="skills" >
+      <div class="padding-between-blocks skills__content">
+        <h2 class="blocks-title skills__title" id="skillsTitle">Опыт</h2>
+        <div class="skills-container">
+
+          <div class="photo-cont">
+            <div class="photo-block">
+              <img id="skillsImg" src="images/skills-myphoto-1.png" alt="Skills photos" class="photo-block__img">
+            </div>
+          </div>
+          <div class="radiobtn-cont">
+            <div class="radiobtn-block">
+              <button id="content" class="radiobtn-block__button radiobtn-block__button--active">Контент</button>
+              <button id="management" class="radiobtn-block__button">Менеджмент</button>
+              <button id="design" class="radiobtn-block__button">Дизайн</button>
+              <button id="speaker" class="radiobtn-block__button">Спикерство</button>
+            </div>
+          </div>
+          <div class="description-cont">
+            <div class="description-block">
+              <h3 id="skillsSubitle" class="blocks-subtitle description-block__title">Создание контента</h3>
+              <p id="skillsText" class="blocks-regular description-block__text">Есть богатый опыт в создании контента для различных СМИ, медиаплатформ и социальных сетей.<br><br>Мои навыки включают создание текстов, новостных и мультимедийных материалов (в том числе подкастов, видеороликов), работу в прямом эфире.</p>
+              <div id="skillsButtons" class="description-block__buttons">
+                <a href="https://docs.google.com/document/d/1vXn8nLEUYs1dHJ1VDHtr8BRPOlq6yE31/edit?usp=drive_link&ouid=105516434251710796534&rtpof=true&sd=true" class="button" target="_blank">
+                  <span class="button__text">Публикации</span>
+                </a>
+                <a href="https://t.me/prolisaiezha" class="button" target="_blank">
+                  <span class="button__text">Мой блог</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="bioplus" >
+      <div class="container container--bioplus">
+        <div class="padding-between-blocks bioplus__content">
+          <h2 class="blocks-title bioplus__title">Ещё обо мне</h2>
+          <div class="bioplus-swiper-container">
+            <div class="custom-prev">
+              <svg width="30" height="45" viewBox="0 0 35 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.5 3L4 31.5L32.5 60" stroke="#5B8CF5" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="swiper bioplusSwiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <h3 class="blocks-subtitle swiper-slide__title">Лидер стартапа YOZH</h3>
+                  <div class="swiper-slide__imgblock">
+                    <img src="images/bioplus-image-1.png" alt="YOZH startup logo" class="swiper-slide__img">
+                  </div>
+                  <div class="swiper-slide-description">
+                    <p class="blocks-regular swiper-slide__text">YOZH – мобильное приложение актуальных событий, позволяющее оставаться в курсе жизни города.<br><br>Стал инициатором идеи, привлёк людей к реализации проекта и добился получения финансирования. Разработка станет доступна всем желающим в начале 2025 г.<br><br>Привлечённые инвестиции:<br><span class="blocks-regular swiper-slide__text--accent">1 175 000 руб.</span></p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h3 class="blocks-subtitle swiper-slide__title">Ведущий на радио</h3>
+                  <div class="swiper-slide__imgblock">
+                    <img src="images/bioplus-image-2.jpg" alt="Radio Live photo" class="swiper-slide__img">
+                  </div>
+                  <div class="swiper-slide-description">
+                    <p class="blocks-regular swiper-slide__text">До закрытия региональных прямых эфиров был ведущим (диджеем) на радио «Европа Плюс».<br><br>Проводил эфиры и общался со слушателями, готовил сводку о погоде для других радиостанций («Радио Дача», «Радио Гордость», «Ретро-FM»).</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h3 class="blocks-subtitle swiper-slide__title">Достижения</h3>
+                  <div class="swiper-slide__imgblock">
+                    <img src="images/bioplus-image-3.png" alt="Diplomas ceremony" class="swiper-slide__img">
+                  </div>
+                  <div class="swiper-slide-description">
+                    <p class="blocks-regular swiper-slide__text">В ходе учебной деятельности добился значительных успехов:</p>
+                    <ul class="swiper-slide__list">
+                      <li class="blocks-regular swiper-slide__listitem">Отличник учёбы 2024</li>
+                      <li class="blocks-regular swiper-slide__listitem">Лучший выпускник университета и региона</li>
+                      <li class="blocks-regular swiper-slide__listitem">2 диплома бакалавра с отличием</li>
+                      <li class="blocks-regular swiper-slide__listitem">Обладатель стипендии им. А.И.&nbsp;Солженицына</li>
+                    </ul>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="swiper-pagination"></div>
+            </div>
+            
+            <div class="custom-next">
+              <svg width="30" height="45" viewBox="0 0 36 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3L31.5 31.5L3 60" stroke="#5B8CF5" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ctaBlock" class="cta" >
+      <div class="container">
+        <div class="padding-between-blocks cta__content">
+          <h2 class="blocks-title cta__title">Готовы работать вместе?</h2>
+          <p class="blocks-regular cta__description">Для обсуждения условий или подключения к работе напишите в Telegram или же укажите здесь ваш Email. Отвечу после обращения в ближайшее время!</p>
+          <div class="cta-form">
+            <input class="blocks-regular cta-form__input" type="text" placeholder="Ваш Email" maxlength="30"></input>
+            <button class="cta-form__button">
+              <svg class="cta-form__button-img" width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.625 20.125L14.7 18.1656L19.6156 13.25H6.3125C4.59375 13.25 3.13281 12.6484 1.92969 11.4453C0.726562 10.2422 0.125 8.78125 0.125 7.0625C0.125 5.34375 0.726562 3.88281 1.92969 2.67969C3.13281 1.47656 4.59375 0.875 6.3125 0.875H7V3.625H6.3125C5.35 3.625 4.53646 3.95729 3.87188 4.62188C3.20729 5.28646 2.875 6.1 2.875 7.0625C2.875 8.025 3.20729 8.83854 3.87188 9.50313C4.53646 10.1677 5.35 10.5 6.3125 10.5H19.6156L14.7 5.55L16.625 3.625L24.875 11.875L16.625 20.125Z" fill="white"/></svg>
+              <span class="blocks-regular cta-form__button-text">Связаться</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="footer-top__content">
+        <div class="logo">
+          <img class="logo__img" src="images/logo.png" alt="logo">
+        </div>
+        <div class="socmedia">
+          <a class="socmedia__link" href="https://t.me/foxdek" target="_blank">
+            <svg class="socmedia__img" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 50C38.8104 50 50 38.8104 50 25C50 11.1896 38.8104 0 25 0C11.1896 0 0 11.1896 0 25C0 38.8104 11.1896 50 25 50ZM11.4396 24.4583L35.5438 15.1646C36.6625 14.7604 37.6396 15.4375 37.2771 17.1292L37.2792 17.1271L33.175 36.4625C32.8708 37.8333 32.0562 38.1667 30.9167 37.5208L24.6667 32.9146L21.6521 35.8187C21.3187 36.1521 21.0375 36.4333 20.3917 36.4333L20.8354 30.0729L32.4187 19.6083C32.9229 19.1646 32.3062 18.9146 31.6417 19.3563L17.3271 28.3687L11.1562 26.4437C9.81667 26.0187 9.7875 25.1042 11.4396 24.4583Z" fill="black"/></svg>
+          </a>
+          <a class="socmedia__link" href="https://vk.com/foxde_bf" target="_blank">
+            <svg class="socmedia__img" width="50" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.5835 0C11.7764 0 0.583496 11.1929 0.583496 25C0.583496 38.8071 11.7764 50 25.5835 50C39.3906 50 50.5835 38.8071 50.5835 25C50.5835 11.1929 39.3906 0 25.5835 0ZM38.9002 33.4863H35.7278C35.3842 33.4867 35.045 33.4097 34.7353 33.2609C34.4256 33.1121 34.1534 32.8954 33.939 32.627C32.9876 31.4325 31.1134 29.3146 29.1455 28.405C29.0315 28.3516 28.9059 28.3279 28.7803 28.3359C28.6548 28.3439 28.5332 28.3835 28.427 28.4509C28.3207 28.5184 28.2332 28.6115 28.1724 28.7217C28.1117 28.8319 28.0797 28.9557 28.0795 29.0815V32.219C28.0795 32.3855 28.0468 32.5502 27.9831 32.704C27.9195 32.8577 27.8262 32.9974 27.7085 33.1151C27.5908 33.2328 27.4512 33.3262 27.2974 33.3899C27.1437 33.4535 26.9789 33.4863 26.8125 33.4863H25.3456C23.438 33.4863 19.33 32.3251 16.0566 27.5567C13.2676 23.4942 12.0243 20.3458 11.2993 17.7931C11.2572 17.6435 11.2503 17.4861 11.2792 17.3334C11.308 17.1806 11.3719 17.0367 11.4658 16.9128C11.5597 16.7889 11.681 16.6885 11.8202 16.6194C11.9595 16.5502 12.1128 16.5143 12.2683 16.5145H15.4774C15.7976 16.5142 16.1093 16.6173 16.3662 16.8084C16.6231 16.9995 16.8114 17.2684 16.9032 17.5751C17.5 19.5711 19.0457 23.8769 21.7779 26.021C21.8612 26.0867 21.9613 26.1276 22.0668 26.139C22.1723 26.1505 22.2788 26.132 22.3743 26.0858C22.4697 26.0395 22.5503 25.9673 22.6066 25.8775C22.663 25.7876 22.693 25.6837 22.6931 25.5776V20.5517C22.6931 19.5584 22.2626 18.5646 21.5907 17.788C21.4939 17.6766 21.4312 17.5397 21.41 17.3937C21.3888 17.2476 21.4101 17.0985 21.4713 16.9642C21.5325 16.8299 21.6311 16.7161 21.7552 16.6363C21.8793 16.5564 22.0238 16.514 22.1714 16.514H27.1192C27.374 16.514 27.6184 16.6152 27.7986 16.7953C27.9787 16.9755 28.08 17.2198 28.08 17.4746V24.2446C28.08 24.3426 28.107 24.4387 28.158 24.5224C28.209 24.6061 28.282 24.6742 28.3691 24.7191C28.4562 24.764 28.554 24.7841 28.6517 24.7772C28.7495 24.7703 28.8435 24.7366 28.9233 24.6798C29.8315 24.0333 30.6094 23.0782 31.3248 22.0047C32.2252 20.6543 33.3239 18.4221 33.8751 17.2636C33.9818 17.0391 34.1499 16.8496 34.36 16.7168C34.5701 16.5841 34.8135 16.5137 35.062 16.5137H38.562C38.7082 16.5136 38.8519 16.5509 38.9796 16.6219C39.1073 16.693 39.2148 16.7955 39.2918 16.9197C39.3688 17.0439 39.4128 17.1857 39.4196 17.3317C39.4265 17.4777 39.3959 17.623 39.3309 17.7539C38.4477 19.5254 36.7274 22.7752 35.1087 24.6818C34.877 24.956 34.7635 25.311 34.7932 25.6687C34.823 26.0265 34.9934 26.3578 35.2672 26.59C36.3224 27.4916 37.9696 29.1584 39.7456 31.9347C39.8436 32.0866 39.8988 32.2622 39.9055 32.4429C39.9121 32.6235 39.87 32.8027 39.7835 32.9615C39.697 33.1202 39.5693 33.2528 39.4139 33.3451C39.2584 33.4375 39.081 33.4863 38.9002 33.4863Z" fill="black"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom__content">
+        <span class="blocks-regular footer-bottom__text">2024</span>
+      </div>
+    </div>
+
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>

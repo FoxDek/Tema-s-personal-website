@@ -1,0 +1,156 @@
+@use 'globals/variables'  as *;
+
+.cta {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1400px) {
+      gap: 30px;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    max-width: 700px;
+  }
+}
+
+.cta-form {
+  display: flex;
+  width: 100%;
+  padding-bottom: 80px;
+
+  @media (min-width: 768px) {
+    gap: 35px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 920px;
+    padding-bottom: 150px;
+  }
+
+  &__input {
+    border: none;
+    padding: 15px;
+    background-color: $substrate-color;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    outline: none;
+    outline-offset: -0.15rem;
+
+    @media (min-width: 768px) {
+      border-radius: 10px;
+      padding: 19px;
+    }
+
+    @media (min-width: 1400px) {
+      padding-left: 27px;
+    }
+
+    &::placeholder {
+      color: $text-color-dim;
+    }
+
+    &:focus {
+      outline: 2px solid $accent-color;
+      border-right: none;
+    }
+  }
+
+  &__button {
+    aspect-ratio: 1 / 1;
+    border: none;
+    background-color: $accent-color;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: background-color .3s ease-in-out;
+
+    @media (min-width: 768px) {
+      aspect-ratio: unset;
+      border-radius: 10px;
+      padding: 19px 22px;
+    }
+
+    &:hover {
+      background-color: $accent-color-hover;
+    }
+  }
+
+  &__button-img {
+    display: block;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__button-text {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      color: $text-color-light;
+      font-weight: 600;
+    }
+  }
+}
+
+
+
+
+
+// .footer__input {
+//   display: flex;
+//   align-items: center;
+
+//   & input {
+//     padding: 10px; /* Внутренние отступы */
+//     border: none; /* Убирает границу */
+//     outline: none;
+//     outline-offset: -0.15rem;
+//     height: 44px;
+
+//     &::placeholder {
+//       color: #9C9C9C;
+//     }
+
+//     &:focus {
+//       outline: 2px solid $link-color-hover;
+//     }
+//   }
+
+//   & button {
+//     height: 44px;
+//     width: 44px;
+//     background-color: $second-color; /* Цвет фона кнопки */
+//     border: none; /* Убирает границу */
+//     cursor: pointer; /* Курсор при наведении */
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 0.8rem; /* Внутренние отступы */
+
+//     &:hover {
+//       outline: 2px solid $link-color-hover;
+//       outline-offset: -0.15rem;
+//     }
+
+//     & svg {
+//       width: 1.3rem;
+//       height: 1.3rem;
+
+//       & path {
+//         fill: $text-color-light;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: grid;
+        height: 500px;
+        grid-template-areas: 
+        "b b b"
+        "a a a"
+        "c c c";
+
+        @media (min-width: 768px) {
+          grid-template-areas:
+          "a a a"
+          "b c c"
+          "b c c";
+        }
+
+        @media (min-width: 1400px) {
+          grid-template-areas:
+          "b b a"
+          "b b c"
+          "b b c";
+        }
+      }
+
+      .photo-block {
+        background-color: rgb(146, 202, 143);
+        grid-area: b;
+        width: 100%;
+        height: 100%;
+        width: auto;
+      }
+
+      .button-panel {
+        background-color: rgb(142, 57, 77);
+        grid-area: a;
+        width: 100%;
+        height: 100%;
+      }
+
+      .text-block {
+        background-color: rgb(192, 188, 61);
+        grid-area: c;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="photo-block">Фото</div>
+    <div class="button-panel">Панель с кнопками</div>
+    <div class="text-block">Блок с текстом</div>
+  </div>
+</body>
+</html>

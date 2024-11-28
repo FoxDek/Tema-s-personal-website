@@ -1,0 +1,242 @@
+@use 'globals/variables'  as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  letter-spacing: .03em;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.padding-between-blocks {
+  padding: 40px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 576px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: none;
+    width: 768px;
+  }
+
+  &--wider {
+    @media (min-width: 992px) {
+      width: 992px;
+    }
+  }
+
+  &--bio {
+    @media (min-width: 992px) {
+      width: 868px;
+    }
+  }
+
+  &--bioplus {
+    @media (min-width: 992px) {
+      width: 888px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    width: 1400px;
+  }
+}
+
+.logo {
+  width: 24vw;
+  max-width: 125px;
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    width: 125px;
+  }
+}
+
+.button {
+  background-color: $accent-color;
+  padding: 10px 19px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color .3s ease-in-out;
+
+  &__text {
+    font-size: 14px;
+    color: $text-color-light;
+    font-weight: 600;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 13px 26px;
+  }
+
+  &:hover {
+    background-color: $accent-color-hover;
+  }
+}
+
+.socmedia {
+  display: flex;
+  gap: 20px;
+
+  &__link:hover path {
+    fill: $text-color-accent;
+  }
+
+  &__img {
+    width: 50px;
+    height: 50px;
+
+    & path {
+      fill: $text-color-dark;
+      transition: fill 0.3s ease-in-out;
+    }
+  }
+}
+
+.blocks-title {
+  color: $text-color-accent;
+  font-size: 32px;
+  padding-bottom: 30px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 65px;
+    padding-bottom: 40px;
+  }
+}
+
+.blocks-subtitle {
+  color: $text-color-dark;
+  font-size: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 45px;
+  }
+}
+
+.blocks-regular {
+  color: $text-color-dark;
+  font-size: 14px;
+  line-height: 17px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.separator {
+  // position: relative;
+  width: 100%; /* Ширина элемента, если необходимо */
+  height: 100%; /* Высота элемента, если необходимо */
+  display: none;
+  background-color: $accent-color;
+
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   left: 50%;
+  //   top: 0;
+  //   background-color: $accent-color;
+  //   height: 100%;
+  //   width: 3px;
+  // }
+
+  &--bios {
+    @media (min-width: 768px) {
+      display: block;
+      height: 100%;
+      width: 2px;
+    }
+
+    @media (min-width: 1400px) {
+      height: 100%;
+      width: 3px;
+    }
+  }
+
+  &--competencies {
+    @media (min-width: 1400px) {
+      display: block;
+      height: 100%;
+      width: 3px;
+    }
+  }
+
+  &--bioright {
+    @media (min-width: 1400px) {
+      display: block;
+      width: 100%;
+      height: 3px;
+    }
+  }
+}
+
+.btn-up {
+  position: fixed;
+  background-color: $substrate-color;
+  // background-color: $accent-color;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+  z-index: 1000;
+}
+
+.btn-up::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='000000' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: $substrate-color-hover;
+  }
+}

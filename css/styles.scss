@@ -1,0 +1,13 @@
+@use 'globals/normalize';
+
+@use 'globals/variables';
+@use 'globals/reusable';
+
+@use 'blocks/header';
+@use 'blocks/hero';
+@use 'blocks/bio';
+@use 'blocks/projects';
+@use 'blocks/skills';
+@use 'blocks/bioplus';
+@use 'blocks/cta';
+@use 'blocks/footer';

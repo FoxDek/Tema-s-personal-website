@@ -1,0 +1,167 @@
+@use 'globals/variables' as *;
+
+.hero {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 0;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 60px;
+    }
+  }
+
+  &__textblock {
+    display: flex;
+    flex-direction: column;
+    max-width: 576px;
+
+    @media (min-width: 576px) {
+      max-width: none;
+      width: 420px;
+    }
+
+    @media (min-width: 768px) {
+      width: 401px;
+    }
+
+    @media (min-width: 1400px) {
+      width: 714px;
+    }
+  }
+
+  &__greetings {
+    font-size: 16px;
+    font-weight: 600;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 20px;
+    }
+
+    @media (min-width: 1400px) {
+      font-size: 24px;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 600;
+    color: $text-color-accent;
+    padding-bottom: 10px;
+
+    @media (min-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 30px;
+    }
+
+    @media (min-width: 1400px) {
+      font-size: 32px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+    padding-bottom: 40px;
+    max-width: 331px;
+
+    @media (min-width: 576px) {
+      max-width: none;
+      width: 416px;
+    }
+
+    @media (min-width: 768px) {
+      width: 401px;
+    }
+
+    @media (min-width: 992px) {
+      width: 537px;
+    }
+
+    @media (min-width: 1400px) {
+      width: 714px;
+    }
+  }
+
+  &__profession {
+    font-size: 46px;
+    font-weight: 700;
+
+    &--left {
+      align-self: flex-end;
+    }
+
+    @media (min-width: 576px) {
+      font-size: 58px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 56px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 75px;
+    }
+
+    @media (min-width: 1400px) {
+      font-size: 100px;
+    }
+  }
+
+  &__description {
+    font-size: 14;
+    max-width: 340px;
+    line-height: 120%;
+    text-wrap: pretty;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media (min-width: 992px) {
+      max-width: 400px;
+      font-size: 18px;
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 625px;
+      font-size: 21px;
+    }
+  }
+
+  &__imgblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__avatar {
+    max-width: 420px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      max-width: 320px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 320px;
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 520px;
+    }
+  }
+}
