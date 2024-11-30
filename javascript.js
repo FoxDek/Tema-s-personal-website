@@ -95,6 +95,9 @@ function updateText() {
 updateText()
 window.addEventListener('resize', updateText);
 
+
+// Скрипт для блока skills (меню со сменой текста и изображения)
+
 const buttons = document.querySelectorAll('.radiobtn-block__button');
 
 buttons.forEach(button => {
@@ -118,23 +121,26 @@ buttons.forEach(button => {
       renderData('speaker');
     }
 
-  })})
+})})
 
-  function renderData(blockId) {
-    document.getElementById('skillsImg').src = data[blockId].image;
-    document.getElementById('skillsSubitle').textContent = data[blockId].title;
-    document.getElementById('skillsText').innerHTML = data[blockId].description;
-    const buttonsHTML = data[blockId].buttons.map(button => {
-        return `
-            <a href="${button.link}" class="button" target="_blank">
-                <span class="button__text">${button.text}</span>
-            </a>
-        `;
-    }).join(''); // Объединяем массив строк в одну строку
+function renderData(blockId) {
+  document.getElementById('skillsImg').src = data[blockId].image;
+  document.getElementById('skillsSubitle').textContent = data[blockId].title;
+  document.getElementById('skillsText').innerHTML = data[blockId].description;
+  const buttonsHTML = data[blockId].buttons.map(button => {
+      return `
+          <a href="${button.link}" class="button" target="_blank">
+              <span class="button__text">${button.text}</span>
+          </a>
+      `;
+  }).join(''); // Объединяем массив строк в одну строку
 
-    document.getElementById('skillsButtons').innerHTML = buttonsHTML;
+  document.getElementById('skillsButtons').innerHTML = buttonsHTML;
 }
-  
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderData('content');
+});
 
 const data = {
   content: {
@@ -186,6 +192,9 @@ const data = {
     ]
   }
 };
+
+
+// Свайпер "Ещё обо мне"
 
 var swiperBio = new Swiper(".bioplusSwiper", {
   pagination: {
