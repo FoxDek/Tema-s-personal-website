@@ -124,7 +124,12 @@ buttons.forEach(button => {
 })})
 
 function renderData(blockId) {
-  document.getElementById('skillsImg').src = data[blockId].image;
+  // document.getElementById('skillsImg').src = data[blockId].image;
+  // skillsImageHTML = data[blockId].image.map
+  skillsImageHTML = data[blockId].image;
+
+  document.getElementById('photoBlock').innerHTML = skillsImageHTML;
+
   document.getElementById('skillsSubitle').textContent = data[blockId].title;
   document.getElementById('skillsText').innerHTML = data[blockId].description;
   const buttonsHTML = data[blockId].buttons.map(button => {
@@ -138,13 +143,13 @@ function renderData(blockId) {
   document.getElementById('skillsButtons').innerHTML = buttonsHTML;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderData('content');
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   renderData('content');
+// });
 
 const data = {
   content: {
-    image: "images/skills-myphoto-1.png",
+    image: `<img id="skillsImg" src="images/skills-myphoto-1.png" alt="Skills photos" class="photo-block__img">`,
     title: "Создание контента",
     description: "Есть богатый опыт в создании контента для различных СМИ, медиаплатформ и социальных сетей.<br><br>Мои навыки включают создание текстов, новостных и мультимедийных материалов (в том числе подкастов, видеороликов), работу в прямом эфире.",
     buttons: [
@@ -159,7 +164,7 @@ const data = {
     ]
   },
   management: {
-    image: "images/skills-myphoto-2.jpg",
+    image: `<img id="skillsImg" src="images/skills-myphoto-2.jpg" alt="Skills photos" class="photo-block__img">`,
     title: "Управление проектами",
     description: "В рамках учебных дисциплин разрабатывал личный проект и был лидером группового проекта.<br><br>Разработал идею стартапа «YOZH» и привёл команду к победе в 3 конкурсах грантов и других соревнованиях. Стал основателем компании ООО «ИТС».",
     buttons: [
@@ -170,7 +175,7 @@ const data = {
     ]
   },
   design: {
-    image: "images/skills-myphoto-3.png",
+    image: `<img id="skillsImg" src="images/skills-myphoto-3.png" alt="Skills photos" class="photo-block__img">`,
     title: "Работа с графикой",
     description: "Прошёл несколько курсов по дизайну и графике, имею практический опыт работы с Illustrator, Photoshop, InDesign, Figma, создания презентаций, а также нейросетями для генерации изображений.<br><br>Провёл ребрендинг одной из медиаструктур вуза, активно работал с вёрсткой бумажных материалов.",
     buttons: [
@@ -181,7 +186,7 @@ const data = {
     ]
   },
   speaker: {
-    image: "images/skills-myphoto-4.png",
+    image: `<img id="skillsImg" src="images/skills-myphoto-4.png" alt="Skills photos" class="photo-block__img">`,
     title: "Публичные выступления",
     description: "Выступил в роли спикера на +50 мероприятиях (презентации и защиты личного проекта, мастерклассы, самопрезентации) в разных городах страны.<br><br> Большой опыт общения со СМИ (интервью, репортажи, передача информации о проекте)",
     buttons: [
