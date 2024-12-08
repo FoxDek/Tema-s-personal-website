@@ -1101,16 +1101,26 @@ body {
 .projects .projects-swiper-container .projectsSwiper {
   width: 100%;
   padding-top: 50px;
-  padding-bottom: 60px;
+  padding-bottom: 110px;
+}
+@media (min-width: 768px) {
+  .projects .projects-swiper-container .projectsSwiper {
+    padding-bottom: 120px;
+  }
+}
+@media (min-width: 1400px) {
+  .projects .projects-swiper-container .projectsSwiper {
+    padding-bottom: 140px;
+  }
 }
 .projects .projects-swiper-container .projectsSwiper-slide {
   width: 300px;
-  height: 350px;
+  height: 300px;
 }
 @media (min-width: 768px) {
   .projects .projects-swiper-container .projectsSwiper-slide {
     width: 400px;
-    height: 470px;
+    height: 400px;
   }
 }
 .projects .projects-swiper-container .swiper-slide__img {
