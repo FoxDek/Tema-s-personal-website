@@ -358,13 +358,14 @@
         <div class="padding-between-blocks cta__content">
           <h2 class="blocks-title cta__title">Готовы работать вместе?</h2>
           <p class="blocks-regular cta__description">Для обсуждения условий или подключения к работе напишите в Telegram или же укажите здесь ваш Email. Отвечу после обращения в ближайшее время!</p>
-          <div class="cta-form">
-            <input class="blocks-regular cta-form__input" type="text" placeholder="Ваш Email" maxlength="30"></input>
+          <form id="feedbackForm" class="cta-form">
+            <input class="blocks-regular cta-form__input feedback-form-email" type="text" placeholder="Ваш Email" maxlength="30"></input>
+            <input class="blocks-regular cta-form__input feedback-form-sms" type="text" placeholder="Собщение" maxlength="30"></input>
             <button class="cta-form__button">
               <svg class="cta-form__button-img" width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.625 20.125L14.7 18.1656L19.6156 13.25H6.3125C4.59375 13.25 3.13281 12.6484 1.92969 11.4453C0.726562 10.2422 0.125 8.78125 0.125 7.0625C0.125 5.34375 0.726562 3.88281 1.92969 2.67969C3.13281 1.47656 4.59375 0.875 6.3125 0.875H7V3.625H6.3125C5.35 3.625 4.53646 3.95729 3.87188 4.62188C3.20729 5.28646 2.875 6.1 2.875 7.0625C2.875 8.025 3.20729 8.83854 3.87188 9.50313C4.53646 10.1677 5.35 10.5 6.3125 10.5H19.6156L14.7 5.55L16.625 3.625L24.875 11.875L16.625 20.125Z" fill="white"/></svg>
               <span class="blocks-regular cta-form__button-text">Связаться</span>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>

@@ -244,3 +244,46 @@ const btnUp = {
   }
 }
 btnUp.addEventListener();
+
+// ФОРМА
+
+document.getElementById("feedbackForm").addEventListener("submit", async (e) => {
+  e.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+  const botToken = "7693557054:AAGOp0u6ucLOsncok1vrmtU12f-Q8FL_bFg";
+  const chatId = "689031526";
+  const email = document.querySelector(".feedback-form-email");
+  const sms = document.querySelector(".feedback-form-sms")
+  const message = `Электронная почта: ${email.value.trim()}, сообщение: ${sms.value.trim()}`;
+
+  if (!message) {
+    alert("Введите сообщение!");
+    return;
+  }
+
+  try {
+    const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (data.ok) {
+      alert("Сообщение отправлено!");
+      email.value = ""; // Очистить поле ввода
+      sms.value = "";
+    } else {
+      alert("Ошибка при отправке сообщения!");
+    }
+  } catch (error) {
+    console.error("Ошибка:", error);
+    alert("Произошла ошибка при отправке!");
+  }
+});
