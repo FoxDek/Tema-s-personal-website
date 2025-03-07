@@ -1,46 +1,3 @@
-/**
-     * Ensure that the Swiper instance meets the necessary conditions for looping.
-     */
-function ensureLoopConditions(swiper, callback = () => {}) {
-  const currentParams = swiper.params;
-  const { slidesPerView, slidesPerGroup } = currentParams;
-  const totalSlides = swiper.slides.length;
-
-  const minSlides = slidesPerView + slidesPerGroup;
-
-  if (totalSlides < minSlides || totalSlides % slidesPerGroup !== 0) {
-    duplicateSlides(swiper, minSlides, slidesPerGroup, callback);
-  }
-}
-
-/**
- * Duplicate slides in the Swiper instance to meet the minimum slide requirements.
- */
-function duplicateSlides(swiper, minSlides, slidesPerGroup, callback = () => {}) {
-  const totalSlides = swiper.slides.length;
-  let slidesToAdd = minSlides - totalSlides;
-
-  if (totalSlides % slidesPerGroup !== 0) {
-    slidesToAdd += slidesPerGroup - (totalSlides % slidesPerGroup);
-  }
-
-  const fragment = document.createDocumentFragment();
-  const slidesHTML = swiper.slides.map(slide => slide.outerHTML).join('');
-
-  for (let i = 0; i < slidesToAdd; i++) {
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = slidesHTML;
-    while (tempDiv.firstChild) {
-      fragment.appendChild(tempDiv.firstChild);
-    }
-  }
-
-  swiper.wrapperEl.appendChild(fragment);
-  swiper.update();
-  callback();
-}
-
-// Initialize Swiper
 var swiper = new Swiper(".projectsSwiper", {
   effect: "coverflow",
   grabCursor: true,
@@ -57,13 +14,6 @@ var swiper = new Swiper(".projectsSwiper", {
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
-    renderBullet: function (index, className) {
-    // Limit the number of bullets to 3
-    if (index < 3) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
-    }
-    return ''; // Return empty string for additional bullets
-  },
   },
   breakpoints: {
     768: {
@@ -72,16 +22,11 @@ var swiper = new Swiper(".projectsSwiper", {
   },
   on: {
     init: swiper => {
-      ensureLoopConditions(swiper);
-    },
-    resize: swiper => {
-      ensureLoopConditions(swiper);
+      swiper.slideToLoop(2, 0);
     },
   },
 });
 
-// Slide to the second slide on initialization
-swiper.slideToLoop(1, 0);
 
 function updateText() {
   const skillsTitle = document.getElementById('skillsTitle');
