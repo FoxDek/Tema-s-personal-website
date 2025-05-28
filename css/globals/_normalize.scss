@@ -1,5 +1,9 @@
 @use 'globals/variables' as *;
 
+body {
+  user-select: none;
+}
+
 /**
 Нормализация блочной модели
 */

@@ -5,92 +5,134 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    padding-inline: 15px;
+  }
+
+  &__title {
+    text-align: center;
   }
 
   &__description {
-    padding: 0 10px;
-    max-width: 330px;
-    text-align: center;
+    display: none;
 
-    @media (min-width: 768px) {
-      max-width: 900px;
+    @media (min-width: 1024px) {
+      display: block;
+      text-align: center;
+      max-width: 700px;
     }
 
-    @media (min-width: 1400px) {
-      padding-top: 25px;
-      padding-bottom: 40px;
-    }
   }
 
   .projects-swiper-container {
-    max-width: 320px;
-    
-
-    @media (min-width: 768px) {
-      max-width: none;
-      width: 1150px;
-    }
-
-    .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-
-      @media (min-width: 768px) {
-        width: 12px;
-        height: 12px;
-      }
-
-      @media (min-width: 1400px) {
-        width: 15px;
-        height: 15px;
-      }
-    }
+    width: 100%;
+    max-width: 1150px;
 
     .projectsSwiper {
       width: 100%;
-      padding-top: 50px;
-      padding-bottom: 110px;
+      padding-block: 50px;
 
-      @media (min-width: 768px) {
-        padding-bottom: 120px;
+      .projectsSwiper-wrapper {
+        display: flex;
       }
 
-      @media (min-width: 1400px) {
-        padding-bottom: 140px;
-      }
-    }
-
-    .projectsSwiper-slide {
-      width: 300px;
-      height: 300px;
-
-      @media (min-width: 768px) {
-        width: 400px;
-        height: 400px;
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
-    .swiper-slide__img {
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
+    .swiper-pagination {
+      text-align: center;
+      margin-top: 20px;
     }
 
-    .swiper-slide__buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding-top: 10px;
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: #ccc;
+      opacity: 1;
 
-      @media (min-width: 1400px) {
-        padding-top: 25px;
+      &-active {
+        background: $accent-color;
       }
     }
-    
-    // .swiper-slide-prev, .swiper-slide-next {
-    //   width: 300px;
-    //   height: 350px;
-    // }
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Планшеты (768–1023px): 2 колонки
+    grid-template-rows: repeat(2, auto);   // 4 карточки в слайде (2x2)
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr); // Десктопы: 3 колонки
+    grid-template-rows: repeat(2, auto);   // 6 карточек в слайде (3x2)
+  }
+}
+
+
+.project-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+  }
+
+  &__stack {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+  }
+
+  &__image-wrapper:hover .project-card__overlay {
+    opacity: 1;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
   }
 }

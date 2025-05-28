@@ -1,31 +1,138 @@
-var swiper = new Swiper(".projectsSwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  loop: true,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 50,
-    modifier: 1,
-    slideShadows: false,
+const projectsData = [
+  {
+    img: 'images/project-4-preview.png',
+    demo: 'https://castaway-study.vercel.app/',
+    code: 'https://github.com/FoxDek/Castaway-study',
+    stack: 'Bootstrap, SCSS, JS'
   },
+  {
+    img: 'images/project-5-preview.png',
+    demo: 'https://tt-tema-s-todos.vercel.app/',
+    code: 'https://github.com/FoxDek/TT-tema-s-todos-',
+    stack: 'HTML, SCSS, JS'
+  },
+  {
+    img: 'images/project-6-preview.png',
+    demo: 'https://video-in-text.vercel.app/',
+    code: 'https://github.com/FoxDek/video-in-text',
+    stack: 'Test CSS-task'
+  },
+  {
+    img: 'images/project-7-preview.png',
+    demo: 'https://noir-study.vercel.app/',
+    code: 'https://github.com/FoxDek/noir-study',
+    stack: 'HTML, CSS, JS (test task)'
+  },
+  {
+    img: 'images/project-8-preview.png',
+    demo: 'https://whirl-study.vercel.app/',
+    code: 'https://github.com/FoxDek/whirl-study',
+    stack: 'React (Vite), styled-components'
+  },
+  {
+    img: 'images/project-9-preview.png',
+    demo: 'https://wishbone-study.vercel.app/',
+    code: 'https://github.com/FoxDek/wishbone-study',
+    stack: 'Tailwind, TW-Motion'
+  },
+  {
+    img: 'images/project-10-preview.png',
+    demo: 'https://react-mini-projects-alpha.vercel.app/',
+    code: 'https://github.com/FoxDek/react-mini-projects',
+    stack: 'React (Vite), Tailwind, TW-Motion, CVA'
+  },
+  {
+    img: 'images/project-11-preview.png',
+    demo: 'https://hearthstay-production.vercel.app/',
+    code: 'https://github.com/FoxDek/hearthstay-production',
+    stack: 'HTML, CSS, JS (production)'
+  },
+  {
+    img: 'images/project-12-preview.png',
+    demo: 'https://kanban-react-study.vercel.app/',
+    code: 'https://github.com/FoxDek/kanban-react-study',
+    stack: 'React (Vite), styled-components'
+  },
+  {
+    img: 'images/project-1-preview.png',
+    demo: 'https://expoforum-study.vercel.app/',
+    code: 'https://github.com/FoxDek/expoforum-study',
+    stack: 'HTML, CSS, JS'
+  },
+  {
+    img: 'images/project-2-preview.png',
+    demo: 'https://f-and-b-study-rouge.vercel.app/',
+    code: 'https://github.com/FoxDek/f-and-b-study',
+    stack: 'HTML, CSS, JS (+Swiper.js)'
+  },
+  {
+    img: 'images/project-3-preview.png',
+    demo: 'https://simple-study-eta.vercel.app/',
+    code: 'https://github.com/FoxDek/simple-study',
+    stack: 'HTML, CSS, JS (+Swiper.js)'
+  },
+  // {
+  //   img: 'images/project-5-preview.png',
+  //   demo: '',
+  //   code: '',
+  //   stack: ''
+  // },
+];
+
+const wrapper = document.querySelector('.projectsSwiper-wrapper');
+
+projectsData.forEach(project => {
+  const slide = document.createElement('div');
+  slide.classList.add('swiper-slide');
+
+  slide.innerHTML = `
+    <div class="project-card">
+      <div class="project-card__image-wrapper">
+        <img src="${project.img}" class="project-card__img" />
+        <div class="project-card__overlay">
+          <span class="project-card__stack">${project.stack}</span>
+        </div>
+      </div>
+      <div class="project-card__buttons">
+        <a href="${project.demo}" class="button" target="_blank"><span class="button__text">Демо</span></a>
+        <a href="${project.code}" class="button" target="_blank"><span class="button__text">Код</span></a>
+      </div>
+    </div>
+  `;
+
+  wrapper.appendChild(slide);
+});
+
+// ✅ Инициализация Swiper с grid
+new Swiper('.projectsSwiper', {
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
+    clickable: true,
     dynamicBullets: true,
   },
+  slidesPerView: 1,
+  grabCursor: true,
+  grid: {
+    rows: 2,
+    fill: 'row',
+  },
+  spaceBetween: 20,
   breakpoints: {
     768: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+      },
+    },
+    1024: {
       slidesPerView: 3,
-    }
-  },
-  on: {
-    init: swiper => {
-      swiper.slideToLoop(2, 0);
+      grid: {
+        rows: 2,
+      },
     },
   },
 });
+
 
 
 function updateText() {
