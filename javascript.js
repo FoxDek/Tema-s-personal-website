@@ -1,4 +1,10 @@
-const projectsData = [
+const projectsDataTop = [
+  {
+    img: 'images/project-13-preview.png',
+    demo: 'https://ticktick-copy-study-qc4iv1t85-temas-projects-6f99df8f.vercel.app/tasks/all',
+    code: 'https://github.com/FoxDek/ticktick-copy-study',
+    stack: 'Next JS, Tailwind, CVA, Convex'
+  },
   {
     img: 'images/project-4-preview.png',
     demo: 'https://castaway-study.vercel.app/',
@@ -35,6 +41,15 @@ const projectsData = [
     code: 'https://github.com/FoxDek/wishbone-study',
     stack: 'Tailwind, TW-Motion'
   },
+  // {
+  //   img: 'images/project-5-preview.png',
+  //   demo: '',
+  //   code: '',
+  //   stack: ''
+  // },
+];
+
+const projectsDataBottom = [
   {
     img: 'images/project-10-preview.png',
     demo: 'https://react-mini-projects-alpha.vercel.app/',
@@ -79,9 +94,9 @@ const projectsData = [
   // },
 ];
 
-const wrapper = document.querySelector('.projectsSwiper-wrapper');
+const wrapper = document.querySelector('.projectsSwiper-wrapperTop');
 
-projectsData.forEach(project => {
+projectsDataTop.forEach(project => {
   const slide = document.createElement('div');
   slide.classList.add('swiper-slide');
 
@@ -103,8 +118,34 @@ projectsData.forEach(project => {
   wrapper.appendChild(slide);
 });
 
+const wrapper2 = document.querySelector('.projectsSwiper-wrapperBottom');
+
+projectsDataBottom.forEach(project => {
+  const slide = document.createElement('div');
+  slide.classList.add('swiper-slide');
+
+  slide.innerHTML = `
+    <div class="project-card">
+      <div class="project-card__image-wrapper">
+        <img src="${project.img}" class="project-card__img" />
+        <div class="project-card__overlay">
+          <span class="project-card__stack">${project.stack}</span>
+        </div>
+      </div>
+      <div class="project-card__buttons">
+        <a href="${project.demo}" class="button" target="_blank"><span class="button__text">Демо</span></a>
+        <a href="${project.code}" class="button" target="_blank"><span class="button__text">Код</span></a>
+      </div>
+    </div>
+  `;
+
+  wrapper2.appendChild(slide);
+});
+
+
+
 // ✅ Инициализация Swiper с grid
-new Swiper('.projectsSwiper', {
+new Swiper('.projectsSwiperTop', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -113,7 +154,7 @@ new Swiper('.projectsSwiper', {
   slidesPerView: 1,
   grabCursor: true,
   grid: {
-    rows: 2,
+    rows: 1,
     fill: 'row',
   },
   spaceBetween: 20,
@@ -121,19 +162,46 @@ new Swiper('.projectsSwiper', {
     768: {
       slidesPerView: 2,
       grid: {
-        rows: 2,
+        rows: 1,
       },
     },
     1024: {
       slidesPerView: 3,
       grid: {
-        rows: 2,
+        rows: 1,
       },
     },
   },
 });
 
-
+new Swiper('.projectsSwiperBottom', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+  slidesPerView: 1,
+  grabCursor: true,
+  grid: {
+    rows: 1,
+    fill: 'row',
+  },
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1,
+      },
+    },
+    1024: {
+      slidesPerView: 3,
+      grid: {
+        rows: 1,
+      },
+    },
+  },
+});
 
 function updateText() {
   const skillsTitle = document.getElementById('skillsTitle');
